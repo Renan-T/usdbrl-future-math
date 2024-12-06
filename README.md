@@ -42,46 +42,47 @@
    ```bash
    git clone https://github.com/Renan-T/usdbrl-future-math.git
    cd usdbrl-future-math
-Install Dependencies
+
 
 
 2. **Install Dependencies**
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. **Set Up the Database** 
-Initialize the database:
-python init_db.py
+   Initialize the database:
+   python init_db.py
 
 4. **Run the Flask Backend** 
-Start the Flask server:
-python app.py
+   Start the Flask server:
+   python app.py
 
 5. **Run the Scheduler** 
-Start the scheduler for periodic updates:
-python scheduler.py
+   Start the scheduler for periodic updates:
+   python scheduler.py
 
 6. **Run the Streamlit Dashboard** 
-Start the Streamlit interface:
-streamlit run streamlit_app.py
+   Start the Streamlit interface:
+   streamlit run streamlit_app.py
 
 **Usage**
-Open the Streamlit dashboard in your browser (default: http://localhost:8501).
-View the latest metrics fetched and calculated from financial data.
-Data updates automatically via the scheduler.
+   Open the Streamlit dashboard in your browser (default: http://localhost:8501).
+   View the latest metrics fetched and calculated from financial data.
+   Data updates automatically via the scheduler.
 
 **Project Structure**
 
-usdbrl-future-math/
-├── app.py               # Flask backend
-├── scheduler.py         # Periodic data fetching and calculations
-├── streamlit_app.py     # Streamlit dashboard
-├── data_fetcher_di.py   # Fetch DI data
-├── data_fetcher_dolfuture.py  # Fetch mini-dollar futures
-├── data_fetcher_dvdi.py  # Calculate working days to maturity
-├── data_fetcher_usdbrl.py  # Fetch USD/BRL exchange rate
-├── data_fetcher_usdx.py  # Fetch USDX data
-├── math_operations.py   # Perform financial calculations
-├── financial_data.db    # SQLite database
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+   usdbrl-future-math/
+   ├── app.py               # Flask backend
+   ├── scheduler.py         # Periodic data fetching and calculations
+   ├── streamlit_app.py     # Streamlit dashboard
+   ├── data_fetcher_di.py   # Fetch DI data
+   ├── data_fetcher_dolfuture.py  # Fetch mini-dollar futures
+   ├── data_fetcher_dvdi.py  # Calculate working days to maturity
+   ├── data_fetcher_usdbrl.py  # Fetch USD/BRL exchange rate
+   ├── data_fetcher_usdx.py  # Fetch USDX data
+   ├── math_operations.py   # Perform financial calculations
+   ├── financial_data.db    # SQLite database
+   ├── requirements.txt     # Python dependencies
+   └── README.md            # Project documentation
+
 
