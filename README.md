@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # usdbrl-future-math - Financial Analysis Tool
 
 usdbrl-future-math is an automated tool for financial market analysis. It collects real-time data, performs calculations for key metrics like overRate, fairPrice, and others, and displays them through an interactive dashboard.
@@ -62,4 +61,4 @@ streamlit run streamlit_app.py
 =======
 # usdbrl-future-math
 USDBRL-Future-Math is a Python-based tool for financial analysis. It automates data fetching for USDX, mini-dollar futures, USDBRL, and DI, calculates key metrics like OverRate and FairPrice, and presents them on an interactive Streamlit dashboard. With Flask backend and a scheduler, it ensures real-time updates and seamless analysis for traders.
->>>>>>> 39ce9cb1acad97401446f17483b62f070907be14
+
