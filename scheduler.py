@@ -53,7 +53,7 @@ def run_math_operations():
 
 def schedule_jobs():
     if is_working_day():
-        schedule.every().day.at("9:50").do(run_math_operations)
+        schedule.every().day.at("09:50").do(run_math_operations)
 
 def run_schedule():
     while True:
