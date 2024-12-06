@@ -46,31 +46,38 @@
 
 
 2. **Install Dependencies**
+   ```bash
    pip install -r requirements.txt
 
 3. **Set Up the Database** 
+   ```bash
    Initialize the database:
    python init_db.py
 
 4. **Run the Flask Backend** 
+   ```bash
    Start the Flask server:
    python app.py
 
 5. **Run the Scheduler** 
+   ```bash
    Start the scheduler for periodic updates:
    python scheduler.py
 
 6. **Run the Streamlit Dashboard** 
+   ```bash
    Start the Streamlit interface:
    streamlit run streamlit_app.py
 
 **Usage**
+   ```bash
    Open the Streamlit dashboard in your browser (default: http://localhost:8501).
    View the latest metrics fetched and calculated from financial data.
    Data updates automatically via the scheduler.
+   ```
 
 **Project Structure**
-
+   ```bash
    usdbrl-future-math/
    ├── app.py               # Flask backend
    ├── scheduler.py         # Periodic data fetching and calculations
@@ -84,5 +91,5 @@
    ├── financial_data.db    # SQLite database
    ├── requirements.txt     # Python dependencies
    └── README.md            # Project documentation
-
+   ```
 
