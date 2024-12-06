@@ -51,22 +51,18 @@
 
 3. **Set Up the Database** 
    ```bash
-   Initialize the database:
    python init_db.py
 
 4. **Run the Flask Backend** 
    ```bash
-   Start the Flask server:
    python app.py
 
 5. **Run the Scheduler** 
    ```bash
-   Start the scheduler for periodic updates:
    python scheduler.py
 
 6. **Run the Streamlit Dashboard** 
    ```bash
-   Start the Streamlit interface:
    streamlit run streamlit_app.py
 
 **Usage**
