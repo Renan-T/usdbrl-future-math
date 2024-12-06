@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th class="text-start">Estimate</th>
+            <th class="text-end">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-start">Timestamp</td>
+            <td class="text-end">{{ data[0] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">DI</td>
+            <td class="text-end">{{ data[1] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">DOLFUT</td>
+            <td class="text-end">{{ data[2] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">DVDI</td>
+            <td class="text-end">{{ data[3] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">USDBRL</td>
+            <td class="text-end">{{ data[4] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">USDX</td>
+            <td class="text-end">{{ data[5] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">Over Rate</td>
+            <td class="text-end">{{ data[6] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">Fair Price</td>
+            <td class="text-end">{{ data[7] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">Opening Price</td>
+            <td class="text-end">{{ data[8] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">Max Opening</td>
+            <td class="text-end">{{ data[9] }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">Min Opening</td>
+            <td class="text-end">{{ data[10] }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
