@@ -1,64 +1,87 @@
-# usdbrl-future-math - Financial Analysis Tool
+# USD/BRL Future Math
 
-usdbrl-future-math is an automated tool for financial market analysis. It collects real-time data, performs calculations for key metrics like overRate, fairPrice, and others, and displays them through an interactive dashboard.
-
----
-
-## **Key Features**
-- Fetches real-time data for:
-  - USDX (U.S. Dollar Index)
-  - USDBRL (USD to Brazilian Real exchange rate)
-  - Brazilian mini-dollar futures
-  - DI (Interbank Deposit rates)
-- Automates periodic data updates using a Python scheduler.
-- Calculates essential financial metrics:
-  - **OverRate**: Measures contract volatility.
-  - **FairPrice**: Theoretical price based on market trends.
-  - **Opening, MaxOpening, MinOpening**: Price levels for better market insights.
-- Displays results on a user-friendly Streamlit dashboard.
-- Modular backend built with Flask, allowing API integrations.
+**USD/BRL Future Math** is a Python-based financial analysis tool designed to automate data fetching, processing, and visualization of key financial metrics. It calculates OverRate, FairPrice, Opening, MaxOpening, and MinOpening using real-time and historical data, making it an essential tool for financial analysis.
 
 ---
 
-## **Tech Stack**
-1. **Python**:
-   - Libraries: `streamlit`, `flask`, `sqlite3`, `schedule`, `pandas`, `yfinance`, `selenium`
-2. **Database**:
-   - SQLite for storing calculated metrics.
-3. **Deployment**:
-   - Streamlit for the dashboard.
-   - Flask for backend APIs.
-   - Scheduler for periodic data updates.
+## Key Features
+
+- **Data Fetching**:
+  - Real-time data from reliable sources for:
+    - USDX (U.S. Dollar Index)
+    - USDBRL (USD to Brazilian Real exchange rate)
+    - Brazilian mini-dollar futures
+    - DI (Interbank Deposit rates)
+  - Accurate handling of business days and holidays for maturity calculations.
+
+- **Mathematical Calculations**:
+  - Calculates:
+    - OverRate: Measures volatility.
+    - FairPrice: Theoretical price based on trends.
+    - Opening, MaxOpening, and MinOpening: Useful price levels.
+
+- **Interactive Dashboard**:
+  - Built using **Streamlit**, providing a user-friendly interface to display metrics.
+
+- **Modular Backend**:
+  - Flask-based backend for API interactions.
+  - Scheduled tasks for periodic updates.
 
 ---
 
-## **Installation**
+## Installation
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Renan-T/usdbrl-future-math.git
-cd usdbrl-future-math
+### Prerequisites
 
-1. Install Dependencies
+- Python 3.8 or higher
+- SQLite (for local database storage)
 
+### Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Renan-T/usdbrl-future-math.git
+   cd usdbrl-future-math
+Install Dependencies
+
+
+2. **Install Dependencies**
 pip install -r requirements.txt
 
-2. Set Up the Database
+3. **Set Up the Database** 
+Initialize the database:
+python init_db.py
 
-python models.py
-
-3. Run Flask Backend
-
+4. **Run the Flask Backend** 
+Start the Flask server:
 python app.py
 
-4. Run the Scheduler
-
+5. **Run the Scheduler** 
+Start the scheduler for periodic updates:
 python scheduler.py
 
-5. Run Streamlit Dashboard
-
+6. **Run the Streamlit Dashboard** 
+Start the Streamlit interface:
 streamlit run streamlit_app.py
-=======
-# usdbrl-future-math
-USDBRL-Future-Math is a Python-based tool for financial analysis. It automates data fetching for USDX, mini-dollar futures, USDBRL, and DI, calculates key metrics like OverRate and FairPrice, and presents them on an interactive Streamlit dashboard. With Flask backend and a scheduler, it ensures real-time updates and seamless analysis for traders.
+
+**Usage**
+Open the Streamlit dashboard in your browser (default: http://localhost:8501).
+View the latest metrics fetched and calculated from financial data.
+Data updates automatically via the scheduler.
+
+**Project Structure**
+
+usdbrl-future-math/
+├── app.py               # Flask backend
+├── scheduler.py         # Periodic data fetching and calculations
+├── streamlit_app.py     # Streamlit dashboard
+├── data_fetcher_di.py   # Fetch DI data
+├── data_fetcher_dolfuture.py  # Fetch mini-dollar futures
+├── data_fetcher_dvdi.py  # Calculate working days to maturity
+├── data_fetcher_usdbrl.py  # Fetch USD/BRL exchange rate
+├── data_fetcher_usdx.py  # Fetch USDX data
+├── math_operations.py   # Perform financial calculations
+├── financial_data.db    # SQLite database
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
 
