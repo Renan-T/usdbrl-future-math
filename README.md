@@ -66,11 +66,9 @@
    streamlit run streamlit_app.py
 
 **Usage**
-   ```bash
    Open the Streamlit dashboard in your browser (default: http://localhost:8501).
    View the latest metrics fetched and calculated from financial data.
    Data updates automatically via the scheduler.
-   ```
 
 **Project Structure**
    ```bash
