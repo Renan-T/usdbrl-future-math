@@ -1,58 +1,43 @@
-{% extends "layout.html" %}
-
-{% block main %}
-<table class="table table-striped mt-3">
-    <thead>
-        <tr>
-            <th class="text-start">Estimate</th>
-            <th class="text-end">Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="text-start">Timestamp</td>
-            <td class="text-end">{{ data[0] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">DI</td>
-            <td class="text-end">{{ data[1] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">DOLFUT</td>
-            <td class="text-end">{{ data[2] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">DVDI</td>
-            <td class="text-end">{{ data[3] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">USDBRL</td>
-            <td class="text-end">{{ data[4] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">USDX</td>
-            <td class="text-end">{{ data[5] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">Over Rate</td>
-            <td class="text-end">{{ data[6] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">Fair Price</td>
-            <td class="text-end">{{ data[7] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">Opening Price</td>
-            <td class="text-end">{{ data[8] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">Max Opening</td>
-            <td class="text-end">{{ data[9] }}</td>
-        </tr>
-        <tr>
-            <td class="text-start">Min Opening</td>
-            <td class="text-end">{{ data[10] }}</td>
-        </tr>
-    </tbody>
-</table>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Dollar Calculated</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Financial Data Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                {% for header in headers %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                {% for item in row %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

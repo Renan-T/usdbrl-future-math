@@ -62,4 +62,3 @@ def fetch_dolfuture_value():
         driver.quit()
 
     return float(formatted_value)
-

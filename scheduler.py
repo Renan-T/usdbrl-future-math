@@ -32,6 +32,8 @@ def fetch_all_data():
     return DI, DOLFUT, DVDI, USDBRL, USDX
 
 def run_math_operations():
+    print("Starting math operations...")
+
     DI, DOLFUT, DVDI, USDBRL, USDX = fetch_all_data()
     
     overRate = over_rate(DVDI, DI)
@@ -52,8 +54,8 @@ def run_math_operations():
     conn.close()
 
 def schedule_jobs():
-    if is_working_day():
-        schedule.every().day.at("09:50").do(run_math_operations)
+    if not is_working_day():
+        schedule.every().day.at("10:45").do(run_math_operations)
 
 def run_schedule():
     while True:
